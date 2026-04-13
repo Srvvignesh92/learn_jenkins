@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent any {
+        docker {
+            image 'python:3.9'
+         } }
+    }
     stages {
         stage('Checkout the code') {
             steps {

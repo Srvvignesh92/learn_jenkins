@@ -1,4 +1,4 @@
-Simple Flask app for Jenkins CI/CD practice
+Simple Flask app for Jenkins CI/CD practice.
 
 Endpoints:
 - /       -> Hello message

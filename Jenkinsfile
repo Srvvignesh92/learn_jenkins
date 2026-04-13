@@ -1,11 +1,6 @@
 pipeline {
     agent any
-        {
-            docker {
-                image 'python:3.10-slim'
-                args '-v /var/jenkins_home:/var/jenkins_home'
-            }
-        }
+
 
     stages {
         stage('Checkout code') {

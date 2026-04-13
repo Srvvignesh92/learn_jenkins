@@ -15,7 +15,14 @@ pipeline {
         }
         stage('Install dependencies') {
             steps {
-                sh 'pip install -r requirements.txt'
+                sh '''
+                    # 1. Ensure venv exists
+                    python3 -m venv venv
+                    
+                    # 2. Use the pip inside the venv to install
+                    ./venv/bin/pip install --upgrade pip
+                    ./venv/bin/pip install -r requirements.txt
+                '''
             }
         }
     }

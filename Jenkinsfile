@@ -1,9 +1,7 @@
 pipeline {
     agent any
-
-
     stages {
-        stage('Checkout code') {
+        stage('Checkout the code') {
             steps {
                 git branch: 'main', credentialsId: 'Git-id', url: 'https://github.com/Srvvignesh92/learn_jenkins'
             }

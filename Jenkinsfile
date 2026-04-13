@@ -3,7 +3,7 @@ pipeline {
         docker {
             image 'python:3.9-slim'
          } }
-    }
+    
     stages {
         stage('Checkout the code') {
             steps {

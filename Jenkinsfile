@@ -22,8 +22,8 @@ pipeline {
         stage('Run tests') {
             steps {
                 sh '''
-                    # Activate the virtual environment and run tests.
-                    source venv/bin/activate
+                    # Activate the virtual environment and run tests...
+                    . venv/bin/activate
                     pytest tests/
                 '''
             }

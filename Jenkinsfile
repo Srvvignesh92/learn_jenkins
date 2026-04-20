@@ -11,12 +11,10 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 sh '''
-                    # 1. Ensure venv exists
+                    # Create a virtual environment and install dependencies.
                     python3 -m venv venv
-                    
-                    # 2. Use the pip inside the venv to install
-                    ./venv/bin/pip install --upgrade pip
-                    ./venv/bin/pip install -r requirements.txt
+                    source venv/bin/activate
+                    pip install -r requirements.txt
                 '''
             }
         }

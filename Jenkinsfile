@@ -23,7 +23,7 @@ pipeline {
             steps {
                 sh '''
                     # Activate the virtual environment and run tests.
-                    source venv/bin/activate
+                    . venv/bin/activate
                     pytest tests/
                 '''
             }
